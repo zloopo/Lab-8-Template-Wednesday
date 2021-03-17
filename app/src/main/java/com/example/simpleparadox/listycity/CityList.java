@@ -70,6 +70,22 @@ public class CityList {
     }
 
     /**
+     * Sets city at index if there.
+     * @param index
+     *      Index of which city to set to the passed city
+     * @param city
+     *      Candidate city to delete
+     */
+    public void setCity(int index, City city) {
+        if (cities.size() - 1 < index) {
+            throw new IllegalArgumentException();
+        }
+
+        cities.set(index, city);
+    }
+
+
+    /**
      * Return the size of the city list
      * @return
      *      Size of city list
