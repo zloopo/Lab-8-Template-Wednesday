@@ -77,6 +77,11 @@ public class CityList {
      *      Candidate city to delete
      */
     public void setCity(int index, City city) {
+        if (cities.size() - 1 < index) {
+            throw new IllegalArgumentException();
+        }
+
+        cities.set(index, city);
     }
 
 
